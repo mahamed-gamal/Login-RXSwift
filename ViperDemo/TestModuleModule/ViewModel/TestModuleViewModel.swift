@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Network
 
 struct TestModuleViewModel {
 
@@ -16,5 +17,5 @@ struct TestModuleViewModel {
     let password = BehaviorRelay<String?>(value: "")
     let loginTap = PublishSubject<Void>()
     
-    let connectionErrorHandler = BehaviorRelay<Bool>(value: false)
+    let connectionErrorHandler = PublishSubject<NWPath>()
 }

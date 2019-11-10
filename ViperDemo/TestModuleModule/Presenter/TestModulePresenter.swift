@@ -8,9 +8,11 @@
 
 import UIKit
 import RxSwift
+import Network
 
 class TestModulePresenter: TestModulePresenterProtocol {
     
+    let monitor = NWPathMonitor()
     weak private var viewController: TestModuleViewControllerProtocol?
     var interactor: TestModuleInteractorProtocol?
     private let router: TestModuleRouterProtocol
@@ -25,7 +27,7 @@ class TestModulePresenter: TestModulePresenterProtocol {
     
     func attach() {
         handleLoginButtonTap()
-        handleInternetConnection()
+        networkConnection()
     }
     
     private func handleLoginButtonTap() {
@@ -48,10 +50,11 @@ class TestModulePresenter: TestModulePresenterProtocol {
         }).disposed(by: self.disposeBag)
     }
     
-    func handleInternetConnection() {
-        interactor?.isReachable.subscribe(onNext: { [weak self] connected in
-            self?.viewModel.connectionErrorHandler.accept(connected)
-        }).disposed(by: disposeBag)
+    func networkConnection() {
+        let queue = DispatchQueue.global(qos: .background)
+        monitor.start(queue: queue)
+        monitor.pathUpdateHandler = { path in
+            self.viewModel.connectionErrorHandler.onNext(path)
+        }
     }
-    
 }

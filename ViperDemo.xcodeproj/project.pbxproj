@@ -15,8 +15,6 @@
 		86241EE5236747CD000A435C /* TestModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86241EDB236747CD000A435C /* TestModuleInteractor.swift */; };
 		86241EE6236747CD000A435C /* TestModuleLocalizatedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86241EDD236747CD000A435C /* TestModuleLocalizatedStrings.swift */; };
 		86241EE7236747CD000A435C /* TestModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86241EDF236747CD000A435C /* TestModuleRouter.swift */; };
-		862EA07E2371BEF700C8BBD8 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EA07C2371BEF700C8BBD8 /* ReachabilityProtocol.swift */; };
-		862EA07F2371BEF700C8BBD8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EA07D2371BEF700C8BBD8 /* Reachability.swift */; };
 		865A2EF72371851B0002E682 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A2EF62371851B0002E682 /* LoginEntity.swift */; };
 		865CF6102370050900E331BB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CF60F2370050900E331BB /* LoginService.swift */; };
 		865CF6122370052500E331BB /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CF6112370052500E331BB /* LoginEndpoint.swift */; };
@@ -40,8 +38,6 @@
 		86241EDB236747CD000A435C /* TestModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModuleInteractor.swift; sourceTree = "<group>"; };
 		86241EDD236747CD000A435C /* TestModuleLocalizatedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModuleLocalizatedStrings.swift; sourceTree = "<group>"; };
 		86241EDF236747CD000A435C /* TestModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModuleRouter.swift; sourceTree = "<group>"; };
-		862EA07C2371BEF700C8BBD8 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
-		862EA07D2371BEF700C8BBD8 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		865A2EF62371851B0002E682 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		865CF60F2370050900E331BB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		865CF6112370052500E331BB /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
@@ -151,15 +147,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		862EA0802371BF0000C8BBD8 /* Connection */ = {
-			isa = PBXGroup;
-			children = (
-				862EA07D2371BEF700C8BBD8 /* Reachability.swift */,
-				862EA07C2371BEF700C8BBD8 /* ReachabilityProtocol.swift */,
-			);
-			path = Connection;
-			sourceTree = "<group>";
-		};
 		865CF60D237004C300E331BB /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +195,6 @@
 		86F202442367315B000F4EA3 /* ViperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				862EA0802371BF0000C8BBD8 /* Connection */,
 				865CF60D237004C300E331BB /* Network */,
 				86241ED0236747CD000A435C /* TestModuleModule */,
 				86F6C8F02367919800C8DD3A /* Shared */,
@@ -392,10 +378,8 @@
 				86241EE7236747CD000A435C /* TestModuleRouter.swift in Sources */,
 				86241EE5236747CD000A435C /* TestModuleInteractor.swift in Sources */,
 				865A2EF72371851B0002E682 /* LoginEntity.swift in Sources */,
-				862EA07F2371BEF700C8BBD8 /* Reachability.swift in Sources */,
 				86241EE2236747CD000A435C /* TestModulePresenter.swift in Sources */,
 				865CF6122370052500E331BB /* LoginEndpoint.swift in Sources */,
-				862EA07E2371BEF700C8BBD8 /* ReachabilityProtocol.swift in Sources */,
 				86241EE6236747CD000A435C /* TestModuleLocalizatedStrings.swift in Sources */,
 				865CF619237052BA00E331BB /* RequestTokenEntity.swift in Sources */,
 				86241EE0236747CD000A435C /* TestModuleViewModel.swift in Sources */,

@@ -21,7 +21,7 @@ protocol TestModulePresenterProtocol: class {
     var viewModel: TestModuleViewModel  { get }
 }
 
-protocol TestModuleInteractorProtocol: LoginService , RequestTokenService , ReachabilityProtocol {
+protocol TestModuleInteractorProtocol: LoginService , RequestTokenService {
 
 }
 

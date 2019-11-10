@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Network
 
 class TestModuleViewController: UIViewController, TestModuleViewControllerProtocol {
     
@@ -48,14 +49,17 @@ class TestModuleViewController: UIViewController, TestModuleViewControllerProtoc
     }
     
     private func handleInternetConnectivity() {
-        presenter?.viewModel.connectionErrorHandler.subscribe(onNext: { [weak self] connected in
-            if connected == false {
-            let alert = UIAlertController(title: "Error", message: "no internet connection", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alertx) in
+         presenter?.viewModel.connectionErrorHandler.subscribe(onNext: { [weak self] path in
+            DispatchQueue.main.async {
+           if path.status == .unsatisfied {
+           let alert = UIAlertController(title: "Error", message: "no internet connection", preferredStyle: .alert)
+           let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+           }
+          alert.addAction(cancelAction)
+          self?.present(alert, animated: true, completion: nil)
             }
-            alert.addAction(cancelAction)
-            self?.present(alert, animated: true, completion: nil)
-            }
-            }).disposed(by: disposeBag)
+          }
+         }).disposed(by: disposeBag)
     }
+    
 }
